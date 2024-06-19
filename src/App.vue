@@ -39,21 +39,21 @@
             <img src="/assets/chest_common.png" alt="{{ $t('common') }} Chest" class="w-16 pt-2" />
             <div class="flex flex-col text-center uppercase text-common">
               <div class="text-lg">{{ $t('common') }}</div>
-              <div class="text-2xl">{{ position === -1 ? '??' : next.indexOf('common') + 1 }}</div>
+              <div class="text-2xl">#{{ position === -1 ? '??' : next.indexOf('common') + 1 }}</div>
             </div>
           </div>
           <div class="btn btn-secondary flex flex-col items-center justify-center gap-3">
             <img src="/assets/chest_rare.png" alt="{{ $t('rare') }} Chest" class="w-16 pt-2" />
             <div class="flex flex-col text-center uppercase text-rare">
               <div class="text-lg">{{ $t('rare') }}</div>
-              <div class="text-2xl">{{ position === -1 ? '??' : next.indexOf('rare') + 1 }}</div>
+              <div class="text-2xl">#{{ position === -1 ? '??' : next.indexOf('rare') + 1 }}</div>
             </div>
           </div>
           <div class="btn btn-secondary flex flex-col items-center justify-center gap-3">
-            <img src="/assets/chest_rare.png" alt="{{ $t('epic') }} Chest" class="w-16 pt-2" />
+            <img src="/assets/chest_epic.png" alt="{{ $t('epic') }} Chest" class="w-16 pt-2" />
             <div class="flex flex-col text-center uppercase text-epic">
               <div class="text-lg">{{ $t('epic') }}</div>
-              <div class="text-2xl">{{ position === -1 ? '??' : next.indexOf('epic') + 1 }}</div>
+              <div class="text-2xl">#{{ position === -1 ? '??' : next.indexOf('epic') + 1 }}</div>
             </div>
           </div>
         </div>
