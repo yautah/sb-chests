@@ -25,9 +25,10 @@
       </div>
 
       <!-- Message if pattern is not found or found more than once -->
-      <div v-show="position === -1 && pattern.length" class="card w-full max-w-lg p-6">
+      <div v-show="position === -1 && pattern.length" class="card w-full max-w-lg p-6 flex flex-col">
         <div class="text-center text-xl font-extrabold uppercase">{{ $t('unknown_chests') }}</div>
         <div class="text-center">{{ $t('select_at_least_3_chests') }}</div>
+        <button class=" btn btn-sm btn-danger" @click="pattern = []; position = -1">{{ $t('reset') }}</button>
       </div>
 
       <!-- Next chests and cycle -->
