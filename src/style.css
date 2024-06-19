@@ -12,7 +12,7 @@ body,
 }
 
 .container {
-  margin: 20px 0;
+  padding: 20px 20px;
 }
 
 main {
@@ -53,6 +53,7 @@ main {
 }
 
 .card {
+  /* margin: 20px; */
   background-color: #101927;
   border-radius: 10px;
   border: 2px solid #000;

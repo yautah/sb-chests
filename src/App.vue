@@ -1,10 +1,10 @@
 <template>
   <main class="bg-pattern flex min-h-screen select-none flex-col items-center justify-center text-white">
     <div class="container flex flex-col items-center gap-6">
-      <h1 class="text-blueish text-center text-4xl font-extrabold uppercase">爆裂小队宝箱查询助手</h1>
+      <h1 class="text-blueish text-center text-2xl font-extrabold uppercase">爆裂小队宝箱查询助手</h1>
 
       <div class="card flex w-full max-w-lg flex-col gap-6 p-6">
-        <div class="text-center text-3xl font-extrabold uppercase">{{ $t('your_last_chests') }}</div>
+        <div class="text-center text-xl font-extrabold uppercase">{{ $t('your_last_chests') }}</div>
 
         <div class="grid grid-cols-3 gap-3">
           <button class="btn btn-primary" @click="select('common')"><img src="/assets/chest_common.png" alt="{{ $t('common') }} Chest" class="w-16" /></button>
@@ -26,34 +26,34 @@
 
       <!-- Message if pattern is not found or found more than once -->
       <div v-show="position === -1 && pattern.length" class="card w-full max-w-lg p-6">
-        <div class="text-center text-3xl font-extrabold uppercase">{{ $t('unknown_chests') }}</div>
+        <div class="text-center text-xl font-extrabold uppercase">{{ $t('unknown_chests') }}</div>
         <div class="text-center">{{ $t('select_at_least_3_chests') }}</div>
       </div>
 
       <!-- Next chests and cycle -->
       <div v-show="position !== -1" class="card w-full max-w-lg p-6">
-        <div class="pb-6 text-center text-3xl font-extrabold uppercase">{{ $t('next_chests') }}</div>
+        <div class="pb-6 text-center text-xl font-extrabold uppercase">{{ $t('next_chests') }}</div>
 
         <div class="grid grid-cols-3 gap-3">
           <div class="btn btn-secondary flex flex-col items-center justify-center gap-3">
             <img src="/assets/chest_common.png" alt="{{ $t('common') }} Chest" class="w-16 pt-2" />
             <div class="flex flex-col text-center uppercase text-common">
               <div class="text-lg">{{ $t('common') }}</div>
-              <div class="text-4xl">{{ position === -1 ? '??' : next.indexOf('common') + 1 }}</div>
+              <div class="text-2xl">{{ position === -1 ? '??' : next.indexOf('common') + 1 }}</div>
             </div>
           </div>
           <div class="btn btn-secondary flex flex-col items-center justify-center gap-3">
             <img src="/assets/chest_rare.png" alt="{{ $t('rare') }} Chest" class="w-16 pt-2" />
             <div class="flex flex-col text-center uppercase text-rare">
               <div class="text-lg">{{ $t('rare') }}</div>
-              <div class="text-4xl">{{ position === -1 ? '??' : next.indexOf('rare') + 1 }}</div>
+              <div class="text-2xl">{{ position === -1 ? '??' : next.indexOf('rare') + 1 }}</div>
             </div>
           </div>
           <div class="btn btn-secondary flex flex-col items-center justify-center gap-3">
             <img src="/assets/chest_rare.png" alt="{{ $t('epic') }} Chest" class="w-16 pt-2" />
             <div class="flex flex-col text-center uppercase text-epic">
               <div class="text-lg">{{ $t('epic') }}</div>
-              <div class="text-4xl">{{ position === -1 ? '??' : next.indexOf('epic') + 1 }}</div>
+              <div class="text-2xl">{{ position === -1 ? '??' : next.indexOf('epic') + 1 }}</div>
             </div>
           </div>
         </div>
@@ -80,7 +80,7 @@
 
   <dialog ref="credits" class="card max-w-lg p-6 text-white backdrop:bg-black/80">
     <div class="flex flex-col gap-3">
-      <p class="text-blueish mb-3 text-center text-2xl font-extrabold uppercase">Squad Busters Chest Helper v{{ version }}</p>
+      <p class="text-blueish mb-3 text-center text-lg font-extrabold uppercase">Squad Busters Chest Helper v{{ version }}</p>
       <p>This tool lets you input the last chests you got and it will tell you what chests are coming next.</p>
       <p>To remember your last chests, the tool uses your browser's local storage. No data is sent to the server, and no cookies are used.</p>
       <p>This content is not affiliated with, endorsed, sponsored, or specifically approved by Supercell and Supercell is not responsible for it. For more information see <a href="https://www.supercell.com/fan-content-policy" target="_blank">Supercell’s Fan Content Policy</a>.</p>
